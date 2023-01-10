@@ -1,0 +1,68 @@
+<!--<!doctype html>
+<head>
+<style>
+.block1 {
+  max-width: 100px; 
+  max-height: 100px; 
+  
+  display: block;
+}
+
+.block2 {
+  display: inline-block; 
+  vertical-align: top; 
+   
+  border-right: 1px solid #a4a4a4;
+}
+</style>
+</head>
+<body>
+<div class="block1">
+    <div class="block2">
+      <select multiple style="margin-right:-17px" size="11">
+        <option> 1 gene </option>
+        <option> 2 genes </option>
+        <option> 3 genes </option>
+        <option> 4 genes </option>
+        <option> 5 genes </option>
+        <option> 6 genes </option>
+        <option> 7 genes </option>
+        <option> 8 genes </option>
+      </select>
+  </div>
+</div>
+</body>
+</html>-->
+
+<head></head>
+<body>
+    <div>
+        <button>Toggle Scroller</button>
+        <div style="height: 200px; overflow: scroll;">
+        <ul>
+            <select multiple style="margin-right:-17px" size ="11">
+
+                <option> 1 gene </option>
+                <option> 2 genes </option>
+                <option> 3 genes </option>
+                <option> 4 genes </option>
+                <option> 5 genes </option>
+                <option> 6 genes </option>
+                <option> 7 genes </option>
+                <option> 8 genes </option>
+                <!-- More list items -->
+            </select>
+        </ul>
+        </div>
+    </div>
+    <script>
+        const button = document.querySelector('button');
+        const scroller = document.querySelector('div div');
+    
+        let isVisible = false;
+        button.addEventListener('click', () => {
+        isVisible = !isVisible;
+        scroller.style.display = isVisible ? 'block' : 'none';
+        });
+    </script>
+</body>
