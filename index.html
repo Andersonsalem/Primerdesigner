@@ -1,7 +1,177 @@
 <!DOCTYPE html>
 
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="primerdesigner.js"></script>
+</head>
+
+
 <html>
-  
-  
-  
+<div class="header">
+    <h1>Nom du site</h1>
+    <p>Nom des bois</p>
+</div>
+
+<span>
+    <div class="tabs">
+        <input type="radio" id="tab1" name="tabs" onclick="showTab(1)" checked />
+        <label for="tab1">nom du tab 1</label>
+
+        <input type="radio" id="tab2" name="tabs" onclick="showTab(2)" />
+        <label for="tab2">nom du tab 2</label>
+
+        <input type="radio" id="tab3" name="tabs" onclick="showTab(3)" />
+        <label for="tab3">nom du tab 3</label>
+
+        <input type="radio" id="tab4" name="tabs" onclick="showTab(4)" />
+        <label for="tab4">nom du tab 4</label>
+    </div>
+</span>
+
+<span>
+    <div class="tab-content">
+        <div id="content1">
+            <h2>titre du paragraphe</h2>
+            <p>
+            <div>Image de walrus pour le fun</div>
+            <div>
+                <span>
+                    <div class="image-center">
+                        <img src="duck.jfif" alt="Image Description" class="image-style" width="100" height="100"
+                            text-align: center />
+                    </div>
+                </span>
+
+            </div>
+            <div> description </div>
+            </p>
+        </div>
+        <div id="content2">
+            <h2>Titre de la section</h2>
+            <input type="checkbox" id="activate-input" onclick="toggleInput()">
+            <label for="activate-input" id="gene-name-c2">gene name</label>
+            <br>
+            <input type="text" id="extra-info" disabled> <label class="hover-explanation"
+                title="if you didn't put a name in the bottom section put it here"> ? </label>
+            <div><textarea class="big-gene-name" id="input-c2-arn"></textarea></div>
+            <div><button onclick="tryfunction()" class="button-c2">submit</button></div>
+            <div id="hidden-txt-name">you need to input a name</div>
+            <div id="hidden-txt-arn">you need to input a sequence</div>
+        </div>
+        <div id="content3">
+            <h2>Titre de la section</h2>
+            <select id="nombre-field">
+                <option value="0" default>-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <div><button onclick="showOptions()" class="button-c3">show fields</button></div>
+            <div id="option1" class="hidden-field">
+                <h2>Titre de la section 1</h2>
+                <input type="checkbox" id="activate-input1" onclick="toggleInput1()">
+                <label for="activate-input" id="gene-name-c31">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c31" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c31-arn"></textarea></div>
+            </div>
+            <div id="option2" class="hidden-field">
+                <p>section 2</p>
+                <input type="checkbox" id="activate-input2" onclick="toggleInput2()">
+                <label for="activate-input" id="gene-name-c32">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c32" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c32-arn"></textarea></div>
+            </div>
+            <div id="option3" class="hidden-field">
+                <h2>Titre de la section 3</h2>
+                <input type="checkbox" id="activate-input3" onclick="toggleInput3()">
+                <label for="activate-input" id="gene-name-c33">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c33" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c33-arn"></textarea></div>
+            </div>
+            <div id="option4" class="hidden-field">
+                <p>section 4</p>
+                <input type="checkbox" id="activate-input4" onclick="toggleInput4()">
+                <label for="activate-input" id="gene-name-c34">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c34" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c34-arn"></textarea></div>
+            </div>
+            <div id="option5" class="hidden-field">
+                <h2>Titre de la section 5</h2>
+                <input type="checkbox" id="activate-input5" onclick="toggleInput5()">
+                <label for="activate-input" id="gene-name-c35">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c35" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c35-arn"></textarea></div>
+            </div>
+            <div id="option6" class="hidden-field">
+                <p>section 6</p>
+                <input type="checkbox" id="activate-input6" onclick="toggleInput6()">
+                <label for="activate-input" id="gene-name-c36">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c36" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c36-arn"></textarea></div>
+            </div>
+            <div id="option7" class="hidden-field">
+                <h2>Titre de la section 7</h2>
+                <input type="checkbox" id="activate-input7" onclick="toggleInput7()">
+                <label for="activate-input" id="gene-name-c37">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c37" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c37-arn"></textarea></div>
+            </div>
+            <div id="option8" class="hidden-field">
+                <p>section 8</p>
+                <input type="checkbox" id="activate-input8" onclick="toggleInput8()">
+                <label for="activate-input" id="gene-name-c38">gene name</label>
+                <br>
+                <input type="text" id="extra-info-c38" disabled> <label class="hover-explanation"
+                    title="if you didn't put a name in the bottom section put it here"> ? </label>
+                <div><textarea class="big-gene-name" id="input-c38-arn"></textarea></div>
+            </div>
+            <div><div id="hidden-txt-name-c3">you need to input a name</div></div>
+            <div><button onclick="submitc3()" class="button-c2">submit</button></div>
+            <table id="myTable">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div><button onclick="download_all()" id="button-c2-hidden">download_all</button></div>
+            <div><button onclick="download_plasmide()" id="button-c2-hidden2">download plasmide</button></div>
+        </div>
+        <div id="content4">
+            <div class="contact-container">
+                <h1>Contact Us</h1>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p class="email">Email: carl est vraiment beau ngl</p>
+                    <p class="phone-numb">Phone: 514-xxx-xxxx</p>
+                    <p>copie le shit et change le email et phone pour les autres</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</span>
+
 </html>
