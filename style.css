@@ -1,0 +1,180 @@
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #f4d4d8;
+    color: white;
+    font-size: 30px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs label {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.tabs label:hover {
+    background-color: #ccc;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background-color: #fff;
+}
+
+.tab-content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.contact-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 20px;
+
+}
+
+.image-center{
+    text-align: center;
+}
+
+.hover-explanation {
+    position: relative;
+    border-radius: 50%;
+  }
+  
+  .hover-explanation::before {
+    content: attr(title);
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(13, 12, 12);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .hover-explanation:hover::before {
+    visibility: visible;
+  }
+
+  .big-gene-name{
+    width: 500px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .button-c2{
+    position: absolute;
+    right: 800px;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    float: left;
+  }
+
+  #hidden-txt-name{
+    display: none;
+    color: red;
+    position: absolute;
+    right: 800px;
+  }
+
+  #hidden-txt-name-c3{
+    display: none;
+    color: red;
+    position: absolute;
+    right: 500px;
+  }
+  #hidden-txt-arn{
+    display: none;
+    color: red;
+    position: absolute;
+    right: 800px;
+  }
+
+  #nombre-field{
+    position: absolute;
+    right: 800px;
+    width: 100px;
+    height: 30px;
+  }
+
+  .hidden-field{
+    display: none;
+  }
+  .button-c2{
+    position: absolute;
+    right: 500px;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    float: left;
+  }
+
+  #button-c2-hidden{
+    position: absolute;
+    right: 500px;
+    width: 100px;
+    height: 30px;
+    margin: 20px;
+    float: left;
+    display: none;
+    padding: 10px;
+  }
+  #button-c2-hidden2{
+    position: absolute;
+    right: 300px;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    float: left;
+    display: none;
+    padding: 10px;
+  }
+
+
+  
+ /* Table formatting */
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    padding-top: 70px;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    width: 20%; /* This sets the width of each cell to 20% of the table width */
+    word-wrap: break-word; /* This allows the cells to wrap to the next line if the content is too long */
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+
+  /* Highlighting every other row */
+  tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+
+  /* Highlighting the colspan cell */
+  td[colspan] {
+    background-color: #e6e6e6;
+  }
