@@ -205,19 +205,24 @@ function showTab(tabIndex) {
 
 
 function opposite(seq) {
-    let output = "";
-
-    let matches = {
-        "A": "T",
-        "T": "A",
-        "C": "G",
-        "G": "C"
-    };
-    for (let i of seq) {
-        output += matches[i];
+    let newseq = '';
+    for (let i = seq.length - 1; i >= 0; i--) {
+        switch (seq[i]) {
+            case 'A':
+                newseq += 'T';
+                break;
+            case 'T':
+                newseq += 'A';
+                break;
+            case 'C':
+                newseq += 'G';
+                break;
+            case 'G':
+                newseq += 'C';
+                break;
+        }
     }
-
-    return output;
+    return newseq;
 }
 
 function reverse(seq) {
